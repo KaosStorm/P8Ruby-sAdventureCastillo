@@ -17,8 +17,8 @@ public class NewBehaviourScript : MonoBehaviour
         float vertical = Input.GetAxis("Vertical");
 
         Vector2 position = transform.position;
-        position.x = position.x + 3.0f * horizontal * Time.deltaTime;
-        position.y = position.y + 3.0f * vertical * Time.deltaTime;
+        position.x = position.x + 10.0f * horizontal * Time.deltaTime;
+        position.y = position.y + 10.0f * vertical * Time.deltaTime;
 
         transform.position = position;
     }
