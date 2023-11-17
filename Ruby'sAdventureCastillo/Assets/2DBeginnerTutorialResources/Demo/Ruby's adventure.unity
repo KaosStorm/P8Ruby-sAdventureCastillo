@@ -57393,7 +57393,7 @@ Camera:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1
+    width: 0.64
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
@@ -60408,6 +60408,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8b47a0f015b4834ca3f85ccaf612cfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 0
+  vertical: 0
+  changeTime: 10
 --- !u!61 &2123517129
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -60693,6 +60696,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 32636872246895723, guid: f4e9740e20c975740884cdc84dcf0f1f, type: 3}
+      propertyPath: m_Size.x
+      value: 0.91092664
+      objectReference: {fileID: 0}
+    - target: {fileID: 32636872246895723, guid: f4e9740e20c975740884cdc84dcf0f1f, type: 3}
+      propertyPath: m_Size.y
+      value: 0.81388223
+      objectReference: {fileID: 0}
     - target: {fileID: 780472223245341871, guid: f4e9740e20c975740884cdc84dcf0f1f, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -60707,11 +60718,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 780472223245341871, guid: f4e9740e20c975740884cdc84dcf0f1f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.0221138
+      value: -0.0278
       objectReference: {fileID: 0}
     - target: {fileID: 780472223245341871, guid: f4e9740e20c975740884cdc84dcf0f1f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.2868042
+      value: 2.2755
       objectReference: {fileID: 0}
     - target: {fileID: 780472223245341871, guid: f4e9740e20c975740884cdc84dcf0f1f, type: 3}
       propertyPath: m_LocalPosition.z
