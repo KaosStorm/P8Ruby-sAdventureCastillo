@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HealthCollectable : MonoBehaviour
 {
-    private void OnTriggerEnter2D(Collider2D other)
+     void OnTriggerEnter2D(Collider2D other)
     {
         NewBehaviourScript controller = other.GetComponent<NewBehaviourScript>();
         if (controller != null)
