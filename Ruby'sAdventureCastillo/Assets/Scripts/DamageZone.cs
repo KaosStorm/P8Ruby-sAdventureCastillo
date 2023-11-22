@@ -6,7 +6,7 @@ public class DamageZone : MonoBehaviour
 {
     void OnTriggerStay2D(Collider2D other)
     {
-        NewBehaviourScript controller = other.GetComponent<NewBehaviourScript>();
+        NewBehaviourScript controller = other.gameObject.GetComponent<NewBehaviourScript>();
 
         if (controller != null)
         {
@@ -14,4 +14,3 @@ public class DamageZone : MonoBehaviour
         }
     }
 }
-
