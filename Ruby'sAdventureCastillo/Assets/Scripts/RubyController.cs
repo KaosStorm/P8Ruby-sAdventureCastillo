@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class NewBehaviourScript : MonoBehaviour
 {
-    private const int V = 5;
     public float speed = 10.0f;
 
-    public int maxHealth = V;
+    public float timeInvincible = 2.0f;
+
+    public int maxHealth = 5;
 
     public GameObject projectilePrefab;
-
-    public float timeInvincible = 2.0f;
 
     public int health { get { return currentHealth; } }
     int currentHealth;
@@ -24,7 +23,7 @@ public class NewBehaviourScript : MonoBehaviour
     float vertical;
 
     Animator animator; 
-    Vector2 lookDirection = new Vector2(1,0);
+    Vector2 lookDirection = new Vector2(1, 0);
 
     // Start is called before the first frame update
     void Start()
@@ -32,6 +31,7 @@ public class NewBehaviourScript : MonoBehaviour
         rigidbody2 = GetComponent<Rigidbody2D>();
         currentHealth = maxHealth;
         animator = GetComponent<Animator>();
+
 
     }
 
@@ -60,13 +60,13 @@ public class NewBehaviourScript : MonoBehaviour
                 isInvincible = false;
             }
         }
-        if (Input.GetKeyDown(KeyCode.C))
+        if(Input.GetKeyDown(KeyCode.C))
         {
             Launch();
         }
         
     }
-    private void FixedUpdate()
+     void FixedUpdate()
     {
         Vector2 position = transform.position;
         position.x = position.x + speed * horizontal * Time.deltaTime;
@@ -87,7 +87,7 @@ public class NewBehaviourScript : MonoBehaviour
             InvincibleTimer = timeInvincible;
         }
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
-        Debug.Log(currentHealth + "/" + maxHealth);
+        UIHealthBar.instance.SetValue(currentHealth/(float)maxHealth);
     }
 
     void Launch()
