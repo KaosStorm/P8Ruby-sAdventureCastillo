@@ -25,6 +25,10 @@ public class NewBehaviourScript : MonoBehaviour
     Animator animator; 
     Vector2 lookDirection = new Vector2(1, 0);
 
+    AudioSource audioSource;
+    public AudioClip throwSound;
+    public AudioClip hitSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +36,7 @@ public class NewBehaviourScript : MonoBehaviour
         currentHealth = maxHealth;
         animator = GetComponent<Animator>();
 
+        audioSource = GetComponent<AudioSource>();
 
     }
 
@@ -65,6 +70,19 @@ public class NewBehaviourScript : MonoBehaviour
             Launch();
         }
         
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            RaycastHit2D hit = Physics2D.Raycast(rigidbody2.position + Vector2.up * 0.2f, lookDirection, 1.5f, LayerMask.GetMask("NPC"));
+            if(hit.collider != null)
+            {
+               NonPlayerCharacter character = hit.collider.GetComponent<NonPlayerCharacter>();
+                if (character != null)
+                {
+                    character.DisplayDialog();
+                }
+            }
+        }
+
     }
      void FixedUpdate()
     {
@@ -72,7 +90,7 @@ public class NewBehaviourScript : MonoBehaviour
         position.x = position.x + speed * horizontal * Time.deltaTime;
         position.y = position.y + speed * vertical * Time.deltaTime;
 
-       rigidbody2.MovePosition(position);
+        rigidbody2.MovePosition(position);
     }
     public void ChangeHealth(int amount)
     {
@@ -85,6 +103,7 @@ public class NewBehaviourScript : MonoBehaviour
             }
             isInvincible = true;
             InvincibleTimer = timeInvincible;
+            Playsound(hitSound);
         }
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
         UIHealthBar.instance.SetValue(currentHealth/(float)maxHealth);
@@ -98,5 +117,11 @@ public class NewBehaviourScript : MonoBehaviour
         projectile.Launch(lookDirection, 300);
 
         animator.SetTrigger("Launch");
+        Playsound(throwSound);
+    }
+
+    public void Playsound(AudioClip clip)
+    {
+        audioSource.PlayOneShot(clip);
     }
 }
