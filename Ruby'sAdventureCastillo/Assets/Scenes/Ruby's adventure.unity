@@ -109758,7 +109758,10 @@ MonoBehaviour:
     All these here robots just showed up, and they dont
     seem to be workin'' right.
 
-    Could ya help me fix ''em'
+    Could ya help me fix ''em
+
+    Press C to shoot
+    piece to fix them.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
