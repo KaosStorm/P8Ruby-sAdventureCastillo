@@ -39,6 +39,10 @@ public class NewBehaviourScript : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
 
     }
+    public void PlaySound(AudioClip clip)
+    {
+        audioSource.PlayOneShot(clip);
+    }
 
     // Update is called once per frame
     void Update()
@@ -60,7 +64,7 @@ public class NewBehaviourScript : MonoBehaviour
         if (isInvincible)
         {
             InvincibleTimer -= Time.deltaTime;
-            if (InvincibleTimer > 0)
+            if (InvincibleTimer < 0)
             {
                 isInvincible = false;
             }
@@ -69,7 +73,6 @@ public class NewBehaviourScript : MonoBehaviour
         {
             Launch();
         }
-        
         if (Input.GetKeyDown(KeyCode.X))
         {
             RaycastHit2D hit = Physics2D.Raycast(rigidbody2.position + Vector2.up * 0.2f, lookDirection, 1.5f, LayerMask.GetMask("NPC"));
@@ -97,7 +100,7 @@ public class NewBehaviourScript : MonoBehaviour
         if (amount < 0)
         {
             animator.SetTrigger("Hit");
-            if (isInvincible)
+            if (isInvincible) 
             {
                 return;
             }
@@ -117,6 +120,7 @@ public class NewBehaviourScript : MonoBehaviour
         projectile.Launch(lookDirection, 300);
 
         animator.SetTrigger("Launch");
+
         Playsound(throwSound);
     }
 

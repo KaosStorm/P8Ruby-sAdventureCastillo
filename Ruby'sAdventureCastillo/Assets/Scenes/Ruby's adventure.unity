@@ -108019,7 +108019,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.023}
   m_AnchorMin: {x: 0.03536701, y: 0.82000005}
   m_AnchorMax: {x: 0.15831651, y: 0.97300005}
-  m_AnchoredPosition: {x: 65.01724, y: 0.1703949}
+  m_AnchoredPosition: {x: 65.01724, y: 0.17037964}
   m_SizeDelta: {x: 168.8246, y: 25.2631}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1606532126
@@ -108555,7 +108555,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -65, y: 0.000011444092}
+  m_AnchoredPosition: {x: -65, y: 0.000015258789}
   m_SizeDelta: {x: -165.7567, y: -24.757103}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1784000845
@@ -110209,7 +110209,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Damageable2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8467865657650275248, guid: f4e9740e20c975740884cdc84dcf0f1f, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

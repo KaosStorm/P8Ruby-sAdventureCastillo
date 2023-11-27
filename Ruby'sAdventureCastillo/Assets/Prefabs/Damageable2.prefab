@@ -11,8 +11,7 @@ GameObject:
   - component: {fileID: 780472223245341871}
   - component: {fileID: 32636872246895723}
   - component: {fileID: 6087087897039266941}
-  - component: {fileID: 1508289756007961344}
-  - component: {fileID: 8467865657650275248}
+  - component: {fileID: 8222865878228966606}
   m_Layer: 0
   m_Name: Damageable2
   m_TagString: Untagged
@@ -29,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 7926124562330152941}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.7894, y: 9.1562, z: 0}
+  m_LocalPosition: {x: -8.7818, y: 9.1653, z: 0}
   m_LocalScale: {x: 0.41573125, y: 0.41573125, z: 0.41573125}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -81,12 +80,12 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 1.0030689, y: 1.0205133}
+  m_Size: {x: 1.0308719, y: 1.0158795}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!114 &6087087897039266941
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -99,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da556894d3c78d64ea287149057545dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!61 &1508289756007961344
+--- !u!61 &8222865878228966606
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -131,43 +130,16 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -9.62, y: 0.5}
+  m_Offset: {x: -0.00926733, y: 0.50926703}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
     oldSize: {x: 1, y: 1}
-    newSize: {x: 1.0030689, y: 1.0205133}
+    newSize: {x: 1.0308719, y: 1.0158795}
     adaptiveTilingThreshold: 0.5
     drawMode: 2
     adaptiveTiling: 0
   m_AutoTiling: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.0370686, y: 1.0185341}
   m_EdgeRadius: 0
---- !u!50 &8467865657650275248
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7926124562330152941}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
